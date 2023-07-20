@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
       <Routes>
 
         
@@ -31,7 +31,7 @@ function App() {
         <Route exact path='/home/productdetails' Component={() => <Home name="productdetails" />}/>
       
       </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
