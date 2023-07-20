@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Signin_Step_1 } from './Pages/SignIn/SignIn_Step_1/SignIn_Step_1';
 import { Signin_Step_2 } from './Pages/SignIn/SignIn_Step_2/SignIn_Step_2';
