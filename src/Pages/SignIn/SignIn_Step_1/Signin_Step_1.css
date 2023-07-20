@@ -1,0 +1,37 @@
+.SignIn_main_container{
+
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.SignIn_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.SignIn_mini_container{
+    /* background-color: rgb(124, 76, 76); */
+    border: 1px solid rgb(201, 196, 196);
+    padding: 50px;
+    border-radius: 10px;
+    margin: 5px;
+}
+.Signin_link_container{
+    display: flex;
+}
+.SignIn_Next_button{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+@media screen and (max-width:600px) {
+    .SignIn_container{
+        justify-content: start;
+    }
+    .SignIn_mini_container{
+        border: none;
+        width: 80vw;
+    }
+}

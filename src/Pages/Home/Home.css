@@ -1,0 +1,60 @@
+.Dashboard_container_1{
+    /* background-color: blue; */
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+}
+.Dashboard_container_2{
+    /* background-color: red; */
+    display: flex;
+    height: auto;
+    border: 1px solid rgb(230, 228, 228);
+}
+.Dashboard_container_2_1{
+    /* background-color: gray; */
+    width: 20vw;
+    border: 1px solid rgb(225, 222, 222);
+    display: flex;
+    justify-content: center;   
+    padding: 10px;
+
+}
+.Dashboard_container_2_1{
+    /* background-color: green; */
+    border: 1px solid rgb(227, 224, 224);
+    display: inline;
+    text-align: center;
+    width: 200px;
+}
+.Dashboard_Menu_button{
+    margin: 20px;
+
+}
+.Dashboard_Menu_Heading_container{
+    display: flex;
+    align-items: center;
+}
+.Dashboard_SearchBar{
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    /* width: 100%; */
+}
+.Dashboard_User_Profile{
+    display: flex;
+    align-items: center;
+}
+.Dashboard_Dp{
+    /* p: 20px; */
+    width: 30px;
+    border-radius: 100px;
+    background-color: rgb(19, 19, 19);
+}
+.Dashboard_container_2_2{
+    margin: 5%;
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    /* background-color: red; */
+}

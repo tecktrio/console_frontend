@@ -1,0 +1,10 @@
+.delete_button{
+    padding:8px  20px;
+    margin: 0px;
+    border: none;
+    border-radius: 5px;
+}
+.delete_button_text{
+    padding: 0px;
+    margin: 0px;
+}

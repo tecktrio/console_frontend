@@ -1,0 +1,8 @@
+.ProductDetails_image{
+    width: 30px;
+}
+.ProductDetail_Heading_Container{
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}

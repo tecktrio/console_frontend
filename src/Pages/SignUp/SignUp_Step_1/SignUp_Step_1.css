@@ -1,0 +1,37 @@
+.SignUp_main_container{
+
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.SignUp_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.SignUp_mini_container{
+    /* background-color: rgb(124, 76, 76); */
+    border: 1px solid rgb(201, 196, 196);
+    padding: 50px;
+    border-radius: 10px;
+    margin: 5px;
+}
+.SignUp_link_container{
+    display: flex;
+}
+.SignUp_Next_button{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+@media screen and (max-width:600px) {
+    .SignUp_container{
+        justify-content: start;
+    }
+    .SignUp_mini_container{
+        border: none;
+        width: 80vw;
+    }
+}

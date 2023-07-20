@@ -1,0 +1,23 @@
+
+.buttonlink_container{
+    /* margin: 10px; */
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+}
+.buttonlink{
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.nMenu_Icon{
+ margin: 0px 5px;
+ width: 15px;
+}
+.buttonlink:hover{
+    cursor: pointer;
+}

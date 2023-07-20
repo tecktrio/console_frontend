@@ -1,0 +1,15 @@
+
+.Dashboard_User_Profile{
+    display: flex;
+    align-items: center;
+}
+.Dashboard_Dp{
+    margin: 5px;
+}
+
+.Dashboard_Api_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+}
