@@ -32,7 +32,7 @@ export default function Home(props) {
           const key = getCookieValue('widecitykey')
           if(key != 'widecitymakesitsimple'){
           console.log('redirecting')
-          window.location.href = '/signin_u'
+          // window.location.href = '/signin_u'
           }
         
           },[])
