@@ -30,10 +30,10 @@ export default function Home(props) {
         }
         useEffect(()=>{
           const key = getCookieValue('widecitykey')
-          // if(key != 'widecitymakesitsimple'){
-          // console.log('redirecting')
-          // window.location.href = '/signin_u'
-          // }
+          if(key != 'widecitymakesitsimple'){
+          console.log('redirecting')
+          window.location.href = '/signin_u'
+          }
         
           },[])
           // end
