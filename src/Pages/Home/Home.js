@@ -32,9 +32,8 @@ export default function Home(props) {
         useEffect(()=>{
           const key = getCookieValue('widecitykey')
           if(key != 'widecitymakesitsimple'){
-          console.log('redirecting')
-          // <Link to='/signin_u'
-          window.location.href = '/signin_u'
+          console.log('redirecting');
+          <Link to='/signin_u'/>
           }
         
           },[])
