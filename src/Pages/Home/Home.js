@@ -33,7 +33,7 @@ export default function Home(props) {
           const key = getCookieValue('widecitykey')
           if(key != 'widecitymakesitsimple'){
           console.log('redirecting');
-          <Link to='/signin_u'/>
+          <Link to='signin_u'/>
           }
         
           },[])
