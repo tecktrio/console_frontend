@@ -18,14 +18,14 @@ function App() {
       <Routes>
 
         
-        <Route path='/signin_u' Component={Signin_Step_1}/>
-        <Route path='/signin_p' Component={Signin_Step_2}/>
+        <Route path='signin_u' Component={Signin_Step_1}/>
+        <Route path='signin_p' Component={Signin_Step_2}/>
 
-        <Route path='/signup_' Component={SignUp_Step_1}/>
-        <Route path='/signup__' Component={SignUp_Step_2}/>
-        <Route path='/signup___' Component={SignUp_Step_3}/>
-        <Route path='/signup____' Component={SignUp_Step_4}/>
-        <Route path='/home' Component={() => <Home name="home" />}/>
+        <Route path='signup_' Component={SignUp_Step_1}/>
+        <Route path='signup__' Component={SignUp_Step_2}/>
+        <Route path='signup___' Component={SignUp_Step_3}/>
+        <Route path='signup____' Component={SignUp_Step_4}/>
+        <Route path='home' Component={() => <Home name="home" />}/>
         <Route path='/' Component={() => <Home name="home" />}/>
         <Route exact path='/home/products' Component={() => <Home name="products" />}/>
         <Route exact path='/home/productdetails' Component={() => <Home name="productdetails" />}/>

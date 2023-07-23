@@ -7,6 +7,7 @@ import ProductDetails from '../ProductDetails/ProductDetails'
 import Products from '../Products/Products'
 import ButtonLink from '../../Components/Button/Link/ButtonLink'
 import Dashboard from '../Dashboard/Dashboard'
+import { Link } from 'react-router-dom'
 
 export default function Home(props) {
   console.log(props.name)
@@ -32,7 +33,8 @@ export default function Home(props) {
           const key = getCookieValue('widecitykey')
           if(key != 'widecitymakesitsimple'){
           console.log('redirecting')
-          // window.location.href = '/signin_u'
+          // <Link to='/signin_u'
+          window.location.href = '/signin_u'
           }
         
           },[])
