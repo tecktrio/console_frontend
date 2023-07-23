@@ -1,6 +1,6 @@
 {
   "name": "widecity_console",
-  "homepage": "https://tecktrio.github.io/console.widecity.in/",
+  "homepage": "console.widecity.in",
   "version": "0.1.0",
   "private": false,
   "dependencies": {

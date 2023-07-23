@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <HashRouter basename='console.widecity.in'>
+      <HashRouter >
       <Routes>
 
         
