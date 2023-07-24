@@ -7,9 +7,8 @@
     margin: 5px;
 }
 
-.Dashboard_Api_container{
+.Dashboard_Product_container{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
     width: 50vw;
 }
