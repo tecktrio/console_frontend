@@ -10,6 +10,7 @@ import axios from 'axios'
 import Text_Error from '../../../Components/Text/Error/Text_Error'
 import LoadingScreen from '../../../Components/LoadingScreen/LoadingScreen'
 import { core_url } from '../../../Constants/Variables'
+import { useNavigate } from 'react-router-dom'
 export function Signin_Step_1() {
 
   // function to send api request
@@ -17,13 +18,14 @@ export function Signin_Step_1() {
     const [Email, setemail] = useState('');
     const [isLoading, setisLoading] = useState(false);
     const [isfailed, setisfailed] = useState(false);
+    const navigate = useNavigate()
 
 
     useEffect(()=>{
       if(data['status'] == 'failed' || data['status']=='success'){
         if(data['status']=='success'){
-          document.cookie = `userEmail=${Email}`
-          window.location.href = '/signin_p'}
+          document.cookie = `userEmail=${Email}`;
+          navigate('/signin_p');}
         else{
           setisfailed(true)
           setisLoading(false)
@@ -68,7 +70,7 @@ export function Signin_Step_1() {
             <Input_Text label='use your widecity account' placeholder='Email id or phone number' Getdata={handleState}/>
             <div className='Signin_link_container'>
               <Text_Links text='Forget email'/>&nbsp;
-              <Text_Links  text='| Create account' link='signup_'/>
+              <Text_Links  text='| Create account' link='/signup_'/>
               </div>
               <div className='SignIn_Next_button' onClick={validateUserEmail}>
                 <Button_Submit text='Next'/>

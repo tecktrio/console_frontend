@@ -23,7 +23,7 @@ export default function Products() {
             <Text_paragraph_lite text={product.description}/>
         </div>
         <div className='Product_Get_Button'>
-          <ButtonLink text='Get It' link='productdetails'/>
+          <ButtonLink text='Get It' link='/productdetails'/>
         </div>
       </div>
      ))}

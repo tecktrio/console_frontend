@@ -7,6 +7,7 @@ import Input_Password from '../../../Components/Input/Password/Input_Password'
 import axios from 'axios'
 import LoadingScreen from '../../../Components/LoadingScreen/LoadingScreen'
 import Text_Error from '../../../Components/Text/Error/Text_Error'
+import { useNavigate } from 'react-router-dom'
 export function Signin_Step_2() {
   // function to send api request
   const [data, setdata] = useState('');
@@ -14,6 +15,7 @@ export function Signin_Step_2() {
   const [isLoading, setisLoading] = useState(false);
   const [isfailed, setisfailed] = useState(false);
 
+  const navigate = useNavigate()
   function getCookieValue(cookieName) {
     const cookies = document.cookie.split(';');
     
@@ -38,7 +40,7 @@ export function Signin_Step_2() {
       console.log('inuseeffent',data['status'])
       if(data['status']=='success'){
       document.cookie = `widecitykey=widecitymakesitsimple`
-      window.location.href = '/home'}
+      navigate('/home');}
       else{
       console.log('invalid password')
       setisfailed(true)

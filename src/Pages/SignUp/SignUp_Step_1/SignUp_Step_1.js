@@ -10,6 +10,7 @@ import axios from 'axios'
 import LoadingScreen from '../../../Components/LoadingScreen/LoadingScreen'
 import Text_Error from '../../../Components/Text/Error/Text_Error'
 import { core_url } from '../../../Constants/Variables'
+import { useNavigate } from 'react-router-dom'
 
 export function SignUp_Step_1() {
     // function to send api request
@@ -18,6 +19,7 @@ export function SignUp_Step_1() {
     const [phone, setphone] = useState('');
     const [isLoading, setisLoading] = useState(false);
     const [isfailed, setisfailed] = useState('');
+    const navigate = useNavigate()
 
     // validating user login
     useEffect(()=>{
@@ -25,7 +27,7 @@ export function SignUp_Step_1() {
         if(data['status']=='success'){
           document.cookie = `userEmail=${username}`
           document.cookie = `userContact=${phone}`
-          window.location.href = '/signup__'}
+          navigate('/signup__');}
         else{
           setisfailed(true)
           setisLoading(false)
@@ -74,7 +76,7 @@ export function SignUp_Step_1() {
           <div className='SignUp_link_container'>
             {/* <Text_Links value='Forget email'/>&nbsp; */}
             <Text_paragraph_lite value='Already have account?'/>
-            <Text_Links  text='Sign In' link='signin_u'/>
+            <Text_Links  text='Sign In' link='/signin_u'/>
             </div>
             <div className='SignUp_Next_button' onClick={validatedata}>
               <Button_Submit text='Next'/>

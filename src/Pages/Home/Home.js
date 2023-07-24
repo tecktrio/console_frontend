@@ -7,8 +7,8 @@ import ProductDetails from '../ProductDetails/ProductDetails'
 import Products from '../Products/Products'
 import ButtonLink from '../../Components/Button/Link/ButtonLink'
 import Dashboard from '../Dashboard/Dashboard'
-import { Link } from 'react-router-dom'
-
+import { Link, useNavigate } from 'react-router-dom'
+import Cookies from 'js-cookie'
 export default function Home(props) {
   console.log(props.name)
   const Route = props.name
@@ -29,16 +29,21 @@ export default function Home(props) {
           // Cookie not found
           return null;
         }
+        const navigate = useNavigate();
+
         useEffect(()=>{
           const key = getCookieValue('widecitykey')
           if(key != 'widecitymakesitsimple'){
           console.log('redirecting');
-          <Link to='signin_u'/>
+          navigate('/signin_u')
           }
         
           },[])
           // end
-
+          const signout = ()=>{
+            Cookies.remove('widecitykey');
+            navigate('/signin_u')
+          }
         
 
   return (
@@ -54,7 +59,7 @@ export default function Home(props) {
         <div className='Dashboard_User_Profile'>
             <div>
                 <div>amalbennypullan4@gmail.com</div>
-                <div style={{'display':'flex','justifyContent':'end'}}><Text_Links text='Update Profile'/></div>
+                <div style={{'display':'flex','justifyContent':'end','cursor':'pointer'}} onClick={()=>signout()}>Signout</div>
             </div>
             <div style={{'margin':'5px'}}>
                 <img src='https://pluspng.com/img-png/png-user-icon-icons-logos-emojis-users-2400.png' alt='image' className='Dashboard_Dp'/>
@@ -65,7 +70,7 @@ export default function Home(props) {
 
         <div className='Dashboard_container_2_1'>
           {Route =='home'? <ButtonLink text='Home' link=''/> :<Text_Links text='Home' link='/home'/>}
-          {Route =='products'? <ButtonLink text='Products' link=''/> :<Text_Links text='Products' link='/home/products'/>}
+          {Route =='products'? <ButtonLink text='Products' link=''/> :<Text_Links text='Products' link='/products'/>}
         </div>
 
         <div className='Dashboard_container_2_2'>
