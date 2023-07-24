@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/console.widecity.in/static/css/main.ef832a24.css",
-    "main.js": "/console.widecity.in/static/js/main.d7cf157e.js",
-    "index.html": "/console.widecity.in/index.html",
-    "main.ef832a24.css.map": "/console.widecity.in/static/css/main.ef832a24.css.map",
-    "main.d7cf157e.js.map": "/console.widecity.in/static/js/main.d7cf157e.js.map"
+    "main.css": "/console_frontend/static/css/main.ef832a24.css",
+    "main.js": "/console_frontend/static/js/main.d7cf157e.js",
+    "index.html": "/console_frontend/index.html",
+    "main.ef832a24.css.map": "/console_frontend/static/css/main.ef832a24.css.map",
+    "main.d7cf157e.js.map": "/console_frontend/static/js/main.d7cf157e.js.map"
   },
   "entrypoints": [
     "static/css/main.ef832a24.css",
