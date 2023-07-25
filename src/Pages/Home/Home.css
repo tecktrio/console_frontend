@@ -10,6 +10,7 @@
     display: flex;
     height: auto;
     border: 1px solid rgb(230, 228, 228);
+    height: 100vh;
 }
 .Dashboard_container_2_1{
     /* background-color: gray; */

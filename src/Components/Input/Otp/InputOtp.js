@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './InputOtp.css'
-import { color_light_black } from '../../../Constants/Colors'
+import { dark_lite } from '../../../Constants/Colors'
 
 export function InputOtp(props) {
 
@@ -20,7 +20,7 @@ const setotp_m = (event) =>{
 
   return (
     <div className='otp_input_container'>
-        <label className='otp_input_label' style={{'color':color_light_black}}>{props.label}</label>
+        <label className='otp_input_label' style={{'color':dark_lite}}>{props.label}</label>
         <div className='otp_input_mini_container'>
           <input type='number' placeholder={props.placeholder} className='otp_input_input' onChange={setotp_m} />
         </div>

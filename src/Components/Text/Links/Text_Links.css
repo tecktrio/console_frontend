@@ -2,6 +2,6 @@
     font-size: 14px;
     display: flex;
     justify-content: start;
-    width: 20vw;
-    margin:8px;
+    align-items: center;
+    margin: 15px;
 }

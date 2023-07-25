@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './InputNumber.css'
-import { color_light_black } from '../../../Constants/Colors'
+import { dark_lite } from '../../../Constants/Colors'
 
 export function   InputNumber(props) {
 
@@ -13,7 +13,7 @@ export function   InputNumber(props) {
 
   return (
     <div className='number_input_container'>
-        <label className='number_input_label' style={{'color':color_light_black}}>{props.label}</label>
+        <label className='number_input_label' style={{'color':dark_lite}}>{props.label}</label>
         <input type='number' placeholder={props.placeholder} className='number_input_input' onChange={update}/>
     </div>
   )

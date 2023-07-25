@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { color_light_black } from '../../../Constants/Colors'
+import { dark_lite } from '../../../Constants/Colors'
 import './Input_Password.css'
 export default function Input_Password(props) {
 
@@ -13,7 +13,7 @@ export default function Input_Password(props) {
 
   return (
     <div className='input_password_container'>
-        <label className='input_password_label' style={{'color':color_light_black}}>{props.label}</label>
+        <label className='input_password_label' style={{'color':dark_lite}}>{props.label}</label>
         <input type='password' placeholder={props.placeholder} className='password_input_input' onChange={update}/>
     </div>
   )

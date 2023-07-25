@@ -7,8 +7,17 @@ import ProductDetails from '../ProductDetails/ProductDetails'
 import Products from '../Products/Products'
 import ButtonLink from '../../Components/Button/Link/ButtonLink'
 import Dashboard from '../Dashboard/Dashboard'
-import { Link, useNavigate } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 import Cookies from 'js-cookie'
+import Dashboard_Icon from '../../assets/Images/dashboard.png'
+import Product_Icon from '../../assets/Images/product.png'
+import Documentation_Icon from '../../assets/Images/document.png'
+import Billing_Icon from '../../assets/Images/bill.png'
+import Account_Icon from '../../assets/Images/user.png'
+import Documentation from '../Documentation/Documentation'
+import Billing from '../Billing/Billing'
+import Account from '../Account/Account'
+
 export default function Home(props) {
   console.log(props.name)
   const Route = props.name
@@ -69,14 +78,20 @@ export default function Home(props) {
       <div className='Dashboard_container_2'>
 
         <div className='Dashboard_container_2_1'>
-          {Route =='home'? <ButtonLink text='Home' link=''/> :<Text_Links text='Home' link='/home'/>}
-          {Route =='products'? <ButtonLink text='Products' link=''/> :<Text_Links text='Products' link='/products'/>}
+          {Route =='home'? <ButtonLink text='Home' link='' icon={Dashboard_Icon}/> :<Text_Links text='Home' link='/home' icon={Dashboard_Icon}/>}
+          {Route =='products'? <ButtonLink text='Products' link='' icon={Product_Icon}/> :<Text_Links text='Products' link='/products' icon={Product_Icon}/>}
+          {Route =='documentation'? <ButtonLink text='Documentation' link='' icon={Documentation_Icon}/> :<Text_Links text='Documentation' link='/documentation' icon={Documentation_Icon}/>}
+          {Route =='billing'? <ButtonLink text='Billing' link='' icon={Billing_Icon}/> :<Text_Links text='Billing' link='/billing' icon={Billing_Icon}/>}
+          {Route =='account'? <ButtonLink text='Account' link='' icon={Account_Icon}/> :<Text_Links text='Account' link='/account' icon={Account_Icon}/>}
         </div>
 
         <div className='Dashboard_container_2_2'>
           {Route=='productdetails' && <ProductDetails/>}
           {Route=='products' && <Products/> }
           {Route=='home' && <Dashboard/> }
+          {Route=='documentation' && <Documentation/> }
+          {Route=='billing' && <Billing/> }
+          {Route=='account' && <Account/> }
         </div>
 
       </div>

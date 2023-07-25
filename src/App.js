@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
+import {HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Signin_Step_1 } from './Pages/SignIn/SignIn_Step_1/SignIn_Step_1';
 import { Signin_Step_2 } from './Pages/SignIn/SignIn_Step_2/SignIn_Step_2';
@@ -20,7 +20,6 @@ function App() {
         
         <Route path='signin_u' Component={Signin_Step_1}/>
         <Route path='signin_p' Component={Signin_Step_2}/>
-
         <Route path='signup_' Component={SignUp_Step_1}/>
         <Route path='signup__' Component={SignUp_Step_2}/>
         <Route path='signup___' Component={SignUp_Step_3}/>
@@ -29,6 +28,9 @@ function App() {
         <Route path='/' Component={() => <Home name="home" />}/>
         <Route exact path='/products' Component={() => <Home name="products" />}/>
         <Route exact path='/productdetails' Component={() => <Home name="productdetails" />}/>
+        <Route exact path='/documentation' Component={() => <Home name="documentation" />}/>
+        <Route exact path='/billing' Component={() => <Home name="billing" />}/>
+        <Route exact path='/account' Component={() => <Home name="account" />}/>
       
       </Routes>
       </HashRouter>
