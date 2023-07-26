@@ -1,8 +1,9 @@
+
 .Product_Main_Container{
     width: 200px;
     border: 1px solid rgb(233, 233, 233);
     box-shadow:rgb(202, 199, 199) 0px 5px 5px;
-    padding: 10px;
+    padding: 25px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;

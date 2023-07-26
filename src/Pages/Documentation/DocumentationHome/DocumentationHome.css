@@ -1,0 +1,8 @@
+.Container1{
+    display: flex;
+    margin: none;
+}
+.verticalLine{
+    border: 1px solid rgb(227, 221, 221);
+    margin: 30px;
+}

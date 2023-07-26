@@ -10,6 +10,7 @@ import ButtonLink from '../../../Components/Button/Link/ButtonLink'
 import axios from 'axios'
 import LoadingScreen from '../../../Components/LoadingScreen/LoadingScreen'
 import Text_Error from '../../../Components/Text/Error/Text_Error'
+import { core_url } from '../../../Constants/Variables'
 export function SignUp_Step_2() {
       // function to send api request
       const [data, setdata] = useState('');
@@ -34,7 +35,8 @@ export function SignUp_Step_2() {
       // end
       const sendData = () => {
         const requestData = { "firstname":firstname,"lastname":lastname};
-        axios.post('http://127.0.0.1:8000/signup__', requestData)
+        let url = core_url+'/signup_'
+        axios.post(core_url, requestData)
         .then(response => {
         setdata(response.data);
         })

@@ -14,16 +14,13 @@
 }
 .Dashboard_container_2_1{
     /* background-color: gray; */
-    width: 20vw;
+    width: 30vw;
     border: 1px solid rgb(225, 222, 222);
-    display: flex;
-    justify-content: center;   
-    padding: 10px;
+    padding: 25px;
 
 }
 .Dashboard_container_2_1{
     /* background-color: green; */
-    border: 1px solid rgb(227, 224, 224);
     display: inline;
     text-align: center;
     width: 200px;
@@ -53,7 +50,7 @@
     background-color: rgb(19, 19, 19);
 }
 .Dashboard_container_2_2{
-    margin: 5%;
+    margin: 2%;
     display: flex;
     /* justify-content: center; */
     flex-wrap: wrap;

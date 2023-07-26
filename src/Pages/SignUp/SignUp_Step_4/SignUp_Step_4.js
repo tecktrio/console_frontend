@@ -8,6 +8,7 @@ import Input_Password from '../../../Components/Input/Password/Input_Password'
 import axios from 'axios'
 import Text_Error from '../../../Components/Text/Error/Text_Error'
 import { InputOtp } from '../../../Components/Input/Otp/InputOtp'
+import { core_url } from '../../../Constants/Variables'
 export function SignUp_Step_4() {
         // function to send api request
         const [data, setdata] = useState('');
@@ -31,7 +32,8 @@ export function SignUp_Step_4() {
 
         const sendData = () => {
           const requestData = { "otp":otp};
-          axios.post('http://127.0.0.1:8000/signup____', requestData)
+          let url = core_url+'/signup____'
+          axios.post(url, requestData)
           .then(response => {
           setdata(response.data);
           })

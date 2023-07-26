@@ -8,7 +8,7 @@
     padding: 10px;
 }
 .text_input_input{
-    padding: 15px;
+    padding: 10px 15px;
     border-radius: 8px;
     border: .5px solid rgba(0,0,0,.2);
     outline: none;

@@ -14,6 +14,8 @@ import { core_url } from '../../../Constants/Variables'
 import { useNavigate } from 'react-router-dom'
 import Reading_Book from '../../../assets/Images/reading-book.png'
 import Forget_Password from '../../../assets/Images/forgot-password.png'
+import { motion } from "framer-motion"
+import Signin_u_skeleton from '../../../Components/Skeletons/signin_u/Signin_u_skeleton'
 
 // main function
 export function Signin_Step_1() {
@@ -66,16 +68,18 @@ export function Signin_Step_1() {
 
   if(isLoading)
     {
-      return (<LoadingScreen/>)
+      return (<Signin_u_skeleton/>)
     }
     else
     {
       return (
-        <div className='SignIn_main_container'>
+        <motion.div className='SignIn_main_container' animate={{scale:1}} initial={{scale:0}} >
+
           <div className='SignIn_container'>
             <div className='SignIn_mini_container'>
               <div style={{'display':'flex','justifyContent':'center'}}>
                 <Text_Heading_2 text='Sign in to Widecity' />
+                
               </div>
               <Text_paragraph_lite text='Widecity is here to make everything simple for you.'/>
               <Text_Links text='Learn More' icon={Reading_Book} /><br/>
@@ -92,7 +96,7 @@ export function Signin_Step_1() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
     )
     }
 }

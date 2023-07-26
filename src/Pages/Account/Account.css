@@ -1,0 +1,16 @@
+.Main_Container{
+
+}
+.container{
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.mini_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 10px;
+}

@@ -1,9 +1,10 @@
 import React from 'react'
+import Comming_Soon from '../../Components/Comming_Soon/Comming_Soon'
 
 export default function Billing() {
   return (
     <div>
-      this is billing page
+      <Comming_Soon/>
     </div>
   )
 }

@@ -1,32 +1,59 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Text_Heading_2 from '../../Components/Text/Heading_2/Text_Heading_2'
 import Text_paragraph_lite from '../../Components/Text/Paragraph_lite/Text_paragraph_lite'
 import './Products.css'
 import ButtonLink from '../../Components/Button/Link/ButtonLink'
 import Download_Icon from  '../../assets/Images/downloads.png'
-import Webspeak_Icon from '../../assets/Images/reading-book.png'
+import axios from 'axios'
+import { core_url } from '../../Constants/Variables'
+import LoadingScreen from '../../Components/LoadingScreen/LoadingScreen'
+import { motion } from 'framer-motion'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
 export default function Products() {
-  const products = [{'name':'webspeak','description':'webspeak is super and wonderful.','icon':{Webspeak_Icon}},{'name':'Quickvote','description':'qucik vote is for making the voting system more effective.'}];
-  
-  return (
-    <>
-     {products.map((product) => (
-       <div className='Product_Main_Container '>
-        <div className='Product_mini_container'>
-            <img src={Webspeak_Icon} alt='image' className='Product_image'/>
-            <div>
-                <Text_Heading_2 text={product.name}/>
-                {/* <Text_Links text='widecity' /> */}
-            </div>
-        </div>
-        <div className='Product_Paragraph'>
-            <Text_paragraph_lite text={product.description}/>
-        </div>
-        <div className='Product_Get_Button'>
-          <ButtonLink text='Get It' link='/productdetails' icon={Download_Icon}/>
-        </div>
-      </div>
-     ))}
-    </>
-  )
-}
+      // variables
+      const [product,setproduct] = useState([])
+      const [isLoading,setisLoading] = useState(true)
+      // useEffect Method 
+      useEffect(()=>{
+        let url = core_url+'/products'
+        axios.get(url).then((response)=>
+        {
+          setproduct(response.data['data'])
+          setisLoading(false)
+        })
+        .catch(()=>
+        {
+          console.log('server error')
+        })
+      },[])
+      // return jsx
+      return (
+        <>
+          {!isLoading?
+            <>
+            {product.map((product) => (
+            <motion.div className='Product_Main_Container '  animate={{y:1}} initial={{y:100}}>
+              <div className='Product_mini_container'>
+                  <img src={product.Icon} alt='image' className='Product_image'/>
+                  <div>
+                      <Text_Heading_2 text={product.Name}/>
+                      <Text_paragraph_lite text={product.Installs+'+ Installs'}/>
+                  </div>
+              </div>
+              <div className='Product_Paragraph'>
+                  <Text_paragraph_lite text={product.Description}/>
+              </div>
+              <div className='Product_Get_Button'>
+              <ButtonLink text='Learn' link={product.Documentation} icon={Download_Icon}/>
+              </div>
+            </motion.div>
+            ))}
+            </>
+          :
+          <LoadingScreen/>   
+          }
+      </>
+      )
+    }

@@ -8,6 +8,10 @@ import axios from 'axios'
 import LoadingScreen from '../../../Components/LoadingScreen/LoadingScreen'
 import Text_Error from '../../../Components/Text/Error/Text_Error'
 import { useNavigate } from 'react-router-dom'
+import { motion } from "framer-motion"
+import { core_url } from '../../../Constants/Variables'
+import Signin_p_skeleton from '../../../Components/Skeletons/signin_p/Signin_p_skeleton'
+
 export function Signin_Step_2() {
   // function to send api request
   const [data, setdata] = useState('');
@@ -34,33 +38,20 @@ export function Signin_Step_2() {
   }
 
 
-  useEffect(()=>{
-
-    if(data['status'] == 'failed' || data['status']=='success'){
-      console.log('inuseeffent',data['status'])
-      if(data['status']=='success'){
-      document.cookie = `widecitykey=widecitymakesitsimple`
-      navigate('/home');}
-      else{
-      console.log('invalid password')
-      setisfailed(true)
-      setisLoading(false)
-      // console.log(isfailed)
-    }
-    }
-  
-    // console.log(Password) 
-  },[data])
-
-  // useEffect(()=>{console.log(userEmail)},[])
   const sendData = () => {
   const userEmail = getCookieValue('userEmail')
   const requestData = { "Email":userEmail, "Password":Password};
-  axios.post('http://127.0.0.1:8000/signin_p', requestData)
+  let url = core_url+'/signin_p'
+  axios.post(url, requestData)
   .then(response => {
-  setdata(response.data);
-  console.log('response',response.data['status'])
-})
+    if(response.data['status'] == 'failed' || response.data['status']=='success'){
+      if(response.data['status']=='success'){
+      document.cookie = `widecitykey=widecitymakesitsimple`
+      navigate('/home');}
+      else{
+      setisfailed(true)
+      setisLoading(false)}}})
+
   .catch(error => {
   console.error('Error:', error);
   });
@@ -76,13 +67,13 @@ export function Signin_Step_2() {
   }
   if(isLoading){
     return(
-          <LoadingScreen/>
+          <Signin_p_skeleton/>
     )
   }
 else{
 
   return (
-    <div className='SignIn_2_main_container'>
+    <motion.div className='SignIn_2_main_container' animate={{scale:1}} initial={{scale:0}}>
       <div className='SignIn_2_container'>
         <div className='SignIn_2_mini_container'>
            <div style={{'display':'flex','justifyContent':'center'}}><Text_Heading_2 text='Password' /></div>
@@ -98,7 +89,7 @@ else{
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 }

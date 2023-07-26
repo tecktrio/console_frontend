@@ -11,6 +11,7 @@ import ButtonLink from '../../../Components/Button/Link/ButtonLink'
 import axios from 'axios'
 import Text_Error from '../../../Components/Text/Error/Text_Error'
 import LoadingScreen from '../../../Components/LoadingScreen/LoadingScreen'
+import { core_url } from '../../../Constants/Variables'
 export function SignUp_Step_3() {
         // function to send api request
         const [data, setdata] = useState('');
@@ -39,7 +40,8 @@ export function SignUp_Step_3() {
 
         const GetOtp=()=>{
           const otp = ''
-          axios.get('http://127.0.0.1:8000/otp_verification')
+          let url = core_url+'/otp_verification'
+          axios.get(core_url)
           .then(response => {
            otp = response.data['otp'];
            console.log('Got the otp.')
@@ -51,7 +53,8 @@ export function SignUp_Step_3() {
 
         const sendData = () => {
           const requestData = { "password":password,"password_re":password_re};
-          axios.post('http://127.0.0.1:8000/signup___', requestData)
+          let url = core_url+'/signup___'
+          axios.post(url, requestData)
           .then(response => {
           setdata(response.data);
           })
