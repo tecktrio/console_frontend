@@ -10,6 +10,7 @@ import Text_Error from '../../../Components/Text/Error/Text_Error'
 import { InputOtp } from '../../../Components/Input/Otp/InputOtp'
 import { core_url } from '../../../Constants/Variables'
 import { useNavigate } from 'react-router-dom'
+import GetCookieValue from '../../../Components/HandleCookie/GetCookie/GetCookieValue'
 export function SignUp_Step_4() {
         // function to send api request
         const [data, setdata] = useState('');
@@ -33,7 +34,15 @@ export function SignUp_Step_4() {
         // end
 
         const sendData = () => {
-          const requestData = { "otp":otp};
+          const requestData = { 
+            "Otp":GetCookieValue("otp"),
+            "First_Name":GetCookieValue("First_Name"),
+            "Last_Name":GetCookieValue("Last_Name"),
+            "Email":GetCookieValue("UserEmail"),
+            "Country_Code":GetCookieValue("CountryCode"),
+            "Contact_Number":GetCookieValue("UserContact"),
+            "Password":GetCookieValue("Password"),
+          };
           let url = core_url+'/signup____'
           axios.post(url, requestData)
           .then(response => {

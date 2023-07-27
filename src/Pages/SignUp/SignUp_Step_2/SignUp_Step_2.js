@@ -26,8 +26,8 @@ export function SignUp_Step_2() {
       useEffect(()=>{
         if(data['status'] == 'failed' || data['status']=='success'){
           if(data['status']=='success'){
-            document.cookie = `firstname=${firstname}`
-            document.cookie = `lastname=${lastname}`
+            document.cookie = `First_Name=${firstname}`
+            document.cookie = `Last_Name=${lastname}`
             navigate('/signup___')}
           else{
             setisfailed(true)

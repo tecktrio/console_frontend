@@ -17,6 +17,7 @@ export function SignUp_Step_1() {
     const [data, setdata] = useState('');
     const [username, setusername] = useState('');
     const [phone, setphone] = useState('');
+    const [countrycode, setcountycode] = useState('+91');
     const [isLoading, setisLoading] = useState(false);
     const [isfailed, setisfailed] = useState('');
     const navigate = useNavigate()
@@ -25,8 +26,9 @@ export function SignUp_Step_1() {
     useEffect(()=>{
       if(data['status'] == 'failed' || data['status']=='success'){
         if(data['status']=='success'){
-          document.cookie = `userEmail=${username}`
-          document.cookie = `userContact=${phone}`
+          document.cookie = `UserEmail=${username}`
+          document.cookie = `UserContact=${phone}`
+          document.cookie = `CountryCode=${countrycode}`
           navigate('/signup__');}
         else{
           setisfailed(true)

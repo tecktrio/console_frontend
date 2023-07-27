@@ -29,8 +29,8 @@ export function SignUp_Step_3() {
             if(data['status']=='success'){
               const otp = GetOtp()
               console.log('sending in cookie',otp)
-              document.cookie = `otp=${otp}`
-              document.cookie = `password=${password}`
+              document.cookie = `Otp=${otp}`
+              document.cookie = `Password=${password}`
               navigate('/signup____')}
             else{
               setisfailed(true)
