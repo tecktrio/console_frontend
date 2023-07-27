@@ -35,7 +35,7 @@ export function SignUp_Step_4() {
 
         const sendData = () => {
           const requestData = { 
-            "Otp":GetCookieValue("otp"),
+            "Otp":GetCookieValue("Otp"),
             "First_Name":GetCookieValue("First_Name"),
             "Last_Name":GetCookieValue("Last_Name"),
             "Email":GetCookieValue("UserEmail"),
