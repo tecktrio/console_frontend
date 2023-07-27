@@ -1,1 +1,1 @@
-export const core_url = 'http://3.95.154.248/console'
+export const core_url = 'https://console.widecity.in/console'
