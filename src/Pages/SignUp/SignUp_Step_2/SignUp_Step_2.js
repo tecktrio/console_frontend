@@ -35,7 +35,7 @@ export function SignUp_Step_2() {
       // end
       const sendData = () => {
         const requestData = { "firstname":firstname,"lastname":lastname};
-        let url = core_url+'/signup_'
+        let url = core_url+'/signup__'
         axios.post(core_url, requestData)
         .then(response => {
         setdata(response.data);
