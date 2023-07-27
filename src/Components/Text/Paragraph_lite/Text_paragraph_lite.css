@@ -7,3 +7,11 @@
     justify-content: start;
     text-align: start;
 }
+
+
+@media screen and (max-width:600px) {
+
+    .text_paragraph_lite{
+        justify-content: center;
+    }
+}

@@ -11,3 +11,12 @@
     padding: 0px;
     margin: 0px;
 }
+
+
+@media screen and (max-width:600px) {
+
+    .submit_button{
+        justify-content: center;
+        width: 80vw;
+    }
+}

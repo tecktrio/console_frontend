@@ -14,7 +14,6 @@
 }
 .Dashboard_container_2_1{
     /* background-color: gray; */
-    width: 30vw;
     border: 1px solid rgb(225, 222, 222);
     padding: 25px;
 
@@ -23,7 +22,7 @@
     /* background-color: green; */
     display: inline;
     text-align: center;
-    width: 200px;
+    width: 300px;
 }
 .Dashboard_Menu_button{
     margin: 20px;
@@ -55,4 +54,19 @@
     /* justify-content: center; */
     flex-wrap: wrap;
     /* background-color: red; */
+}
+.Dashboard_container_2_1_celo{
+    /* background-color: green; */
+    display: none;
+}
+@media screen and (max-width:600px) {
+
+    .Dashboard_container_2_1{
+        /* background-color: green; */
+        display: none;
+    }
+    .Dashboard_container_2_1_celo{
+        /* background-color: green; */
+        display: inline;
+    }
 }

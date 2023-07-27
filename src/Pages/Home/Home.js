@@ -18,6 +18,7 @@ import Account from '../Account/Account'
 import DocumentationHome from '../Documentation/DocumentationHome/DocumentationHome'
 import GetCookieValue from '../../Components/HandleCookie/GetCookie/GetCookieValue'
 import { motion } from "framer-motion"
+import IconLink from '../../Components/Button/Link/IconLink'
 
 export default function Home(props) {
       // Variables and State
@@ -73,6 +74,13 @@ export default function Home(props) {
               {Route.startsWith('documentation') ?  <ButtonLink text='Documentation'  link='' icon={Documentation_Icon}/>       :<Text_Links text='Documentation'  link='/documentation/quickvote'  icon={Documentation_Icon}/>}
               {Route =='billing'?                   <ButtonLink text='Billing'        link='' icon={Billing_Icon}/>             :<Text_Links text='Billing'        link='/billing'                  icon={Billing_Icon}/>}
               {Route =='account'?                   <ButtonLink text='Account'        link='' icon={Account_Icon}/>             :<Text_Links text='Account'        link='/account'                  icon={Account_Icon}/>}
+            </div>
+            <div className='Dashboard_container_2_1_celo'>
+              {Route =='home'?                      <IconLink    link='' icon={Dashboard_Icon}/>           :<IconLink   link='/home'                     icon={Dashboard_Icon}/>}
+              {Route =='products'?                  <IconLink    link='' icon={Product_Icon}/>             :<IconLink   link='/products'                 icon={Product_Icon}/>}
+              {Route.startsWith('documentation') ?  <IconLink    link='' icon={Documentation_Icon}/>       :<IconLink   link='/documentation/quickvote'  icon={Documentation_Icon}/>}
+              {Route =='billing'?                   <IconLink    link='' icon={Billing_Icon}/>             :<IconLink   link='/billing'                  icon={Billing_Icon}/>}
+              {Route =='account'?                   <IconLink    link='' icon={Account_Icon}/>             :<IconLink   link='/account'                  icon={Account_Icon}/>}
             </div>
             <div className='Dashboard_container_2_2'>
               {Route=='productdetails'          && <ProductDetails/>}
