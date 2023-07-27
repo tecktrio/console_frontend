@@ -43,7 +43,7 @@ export function SignUp_Step_3() {
         const GetOtp=()=>{
           const otp = ''
           let url = core_url+'/otp_verification'
-          axios.get(core_url)
+          axios.get(url)
           .then(response => {
            otp = response.data['otp'];
            console.log('Got the otp.')
