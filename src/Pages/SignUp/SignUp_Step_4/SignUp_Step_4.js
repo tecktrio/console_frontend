@@ -9,6 +9,7 @@ import axios from 'axios'
 import Text_Error from '../../../Components/Text/Error/Text_Error'
 import { InputOtp } from '../../../Components/Input/Otp/InputOtp'
 import { core_url } from '../../../Constants/Variables'
+import { useNavigate } from 'react-router-dom'
 export function SignUp_Step_4() {
         // function to send api request
         const [data, setdata] = useState('');
@@ -16,12 +17,13 @@ export function SignUp_Step_4() {
         const [isLoading, setisLoading] = useState(false);
         const [error, seterror] = useState('');
         const [isfailed, setisfailed] = useState(false);
-  
+        const navigate = useNavigate()
+
         // validating user login
         useEffect(()=>{
           if(data['status'] == 'failed' || data['status']=='success'){
             if(data['status']=='success'){
-              window.location.href = '/home'}
+              navigate('/home')}
             else{
               setisfailed(true)
               setisLoading(false)

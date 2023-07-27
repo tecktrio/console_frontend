@@ -12,6 +12,7 @@ import axios from 'axios'
 import Text_Error from '../../../Components/Text/Error/Text_Error'
 import LoadingScreen from '../../../Components/LoadingScreen/LoadingScreen'
 import { core_url } from '../../../Constants/Variables'
+import { useNavigate } from 'react-router-dom'
 export function SignUp_Step_3() {
         // function to send api request
         const [data, setdata] = useState('');
@@ -20,7 +21,8 @@ export function SignUp_Step_3() {
         const [isLoading, setisLoading] = useState(false);
         const [error, seterror] = useState('');
         const [isfailed, setisfailed] = useState(false);
-  
+        const navigate = useNavigate()
+
         // validating user login
         useEffect(()=>{
           if(data['status'] == 'failed' || data['status']=='success'){
@@ -29,7 +31,7 @@ export function SignUp_Step_3() {
               console.log('sending in cookie',otp)
               document.cookie = `otp=${otp}`
               document.cookie = `password=${password}`
-              window.location.href = '/signup____'}
+              navigate('/signup____')}
             else{
               setisfailed(true)
               setisLoading(false)
