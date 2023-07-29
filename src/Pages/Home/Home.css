@@ -22,7 +22,7 @@
     /* background-color: green; */
     display: inline;
     text-align: center;
-    width: 300px;
+    width: 100px;
 }
 .Dashboard_Menu_button{
     margin: 20px;
@@ -31,6 +31,10 @@
 .Dashboard_Menu_Heading_container{
     display: flex;
     align-items: center;
+}
+.Dashboard_Menu_Heading_container_mini{
+    display: flex;
+    align-items: end;
 }
 .Dashboard_SearchBar{
     display: flex;

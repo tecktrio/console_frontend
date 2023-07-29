@@ -1,0 +1,38 @@
+
+.Product_Main_Container_skeleton{
+    width: 200px;
+    border: 1px solid rgb(233, 233, 233);
+    box-shadow:rgb(202, 199, 199) 0px 5px 5px;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    height: 180px;
+}
+.Product_mini_container_skeleton{
+    display: flex;
+    margin: 10px 0px;
+    width: 200px;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    /* margin: 10px; */
+}
+.Product_image_skeleton{
+    margin: 3px 10px;
+    width: 20px;
+    height: 20px;
+}
+.Product_Paragraph_skeleton{
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    justify-content: center;
+    text-align: center;
+}
+.Product_Get_Button_skeleton{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}

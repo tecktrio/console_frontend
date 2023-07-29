@@ -19,6 +19,7 @@
 }
 .SignUp_link_container{
     display: flex;
+    align-items: center;
 }
 .SignUp_Next_button{
     display: flex;

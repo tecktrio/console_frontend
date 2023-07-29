@@ -77,7 +77,7 @@ export function SignUp_Step_1() {
           <InputNumber label='Phone Number' placeholder='+91'  Getdata={handleStatePhone}/>
           <div className='SignUp_link_container'>
             {/* <Text_Links value='Forget email'/>&nbsp; */}
-            <Text_paragraph_lite value='Already have account?'/>
+            <Text_paragraph_lite text='Already have account?'/>
             <Text_Links  text='Sign In' link='/signin_u'/>
             </div>
             <div className='SignUp_Next_button' onClick={validatedata}>

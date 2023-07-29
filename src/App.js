@@ -14,7 +14,7 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 function App() {
   return (
     <div className="App">
-      <SkeletonTheme baseColor="grey" highlightColor="white">
+      <SkeletonTheme baseColor="#B2CEDE" highlightColor="white">
       <HashRouter>
         <Routes>
           <Route path='signin_u'        Component={Signin_Step_1}/>
@@ -27,8 +27,8 @@ function App() {
           <Route path='/'               Component={() =>            <Home name="home" />}/>
           <Route path='/products'       Component={() =>            <Home name="products" />}/>
           <Route path='/productdetails' Component={() =>            <Home name="productdetails" />}/>
-          <Route path='/documentation/academy'     Component={() =>  <Home name="documentation/academy" />}/>
-          <Route path='/documentation/quickvote'  Component={() =>  <Home name="documentation/quickvote" />}/>
+          {/* <Route path='/documentation/academy'     Component={() =>  <Home name="documentation/academy" />}/>
+          <Route path='/documentation/quickvote'  Component={() =>  <Home name="documentation/quickvote" />}/> */}
           <Route path='/billing'        Component={() =>            <Home name="billing" />}/>
           <Route path='/account'        Component={() =>            <Home name="account" />}/>
         </Routes>

@@ -10,6 +10,7 @@ import LoadingScreen from '../../Components/LoadingScreen/LoadingScreen'
 import { motion } from 'framer-motion'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import Products_skeleton from '../../Components/Skeletons/Products/Products_skeleton'
 
 export default function Products() {
       // variables
@@ -52,7 +53,7 @@ export default function Products() {
             ))}
             </>
           :
-          <LoadingScreen/>   
+          <Products_skeleton/>   
           }
       </>
       )
