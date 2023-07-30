@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.e3577c45.css",
-    "main.js": "/static/js/main.aa36cf47.js",
+    "main.css": "/static/css/main.3d54b6e2.css",
+    "main.js": "/static/js/main.843c0ec3.js",
     "static/media/loading.gif": "/static/media/loading.5dc81debced595e49918.gif",
     "static/media/4045264.jpg": "/static/media/4045264.589ff16978038d892b1d.jpg",
     "static/media/comming_soon.png": "/static/media/comming_soon.200b5db72d4bccf6dd6b.png",
     "static/media/user.png": "/static/media/user.557587208eb9e232f2ca.png",
+    "static/media/logo.jpg": "/static/media/logo.1aa8997d01657e7661b1.jpg",
     "static/media/product.png": "/static/media/product.4f36322b33d5d5850fdd.png",
     "static/media/reading-book.png": "/static/media/reading-book.ad096be88eb922217417.png",
     "static/media/bill.png": "/static/media/bill.0a0f9b2906e1d695ced8.png",
+    "static/media/download.svg": "/static/media/download.4a11b21d226a51809bb1405c934b4ed9.svg",
     "index.html": "/index.html",
-    "main.e3577c45.css.map": "/static/css/main.e3577c45.css.map",
-    "main.aa36cf47.js.map": "/static/js/main.aa36cf47.js.map"
+    "main.3d54b6e2.css.map": "/static/css/main.3d54b6e2.css.map",
+    "main.843c0ec3.js.map": "/static/js/main.843c0ec3.js.map"
   },
   "entrypoints": [
-    "static/css/main.e3577c45.css",
-    "static/js/main.aa36cf47.js"
+    "static/css/main.3d54b6e2.css",
+    "static/js/main.843c0ec3.js"
   ]
 }
