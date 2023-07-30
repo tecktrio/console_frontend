@@ -1,10 +1,8 @@
-.delete_button{
+.deletebutton_container{
     padding:8px  20px;
     margin: 0px;
     border: none;
     border-radius: 5px;
-}
-.delete_button_text{
-    padding: 0px;
-    margin: 0px;
+    display: flex;
+    justify-content: center;
 }

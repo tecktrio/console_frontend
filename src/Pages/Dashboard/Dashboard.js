@@ -9,6 +9,7 @@ import { core_url } from '../../Constants/Variables'
 import GetCookieValue from '../../Components/HandleCookie/GetCookie/GetCookieValue'
 import { motion
  } from 'framer-motion'
+import Footer from '../../Components/Footer/Footer'
 export default function Dashboard() {
   
     // functions senddata
@@ -32,7 +33,8 @@ export default function Dashboard() {
   return (
       <motion.div className='Dashboard_container_2_2_mini'  animate={{y:1}} initial={{y:100}}>
             <div style={{'display':'flex','justifyContent':'start'}}>
-          <img src={illustration} style={{'width':'20%','margin':'0px'}}/>
+          {/* <img src={illustration} style={{'width':'50%','height':'200px'}}/> */}
+          <img src='https://media.istockphoto.com/id/1007077762/vector/website-header-or-banner-design-onam-festival-sale-with-discount-upto-65-offer-showing.jpg?s=170667a&w=0&k=20&c=fBzVMwmXCVyV2-eqr2FA-DWRHS89IZalfAXHQ2IHxys=' style={{'width':'100%','borderRadius':'10px','margin':'20px 0px'}}/>
           </div>
           <Text_Heading_2 text='Dashboard'/>
           <Text_paragraph_lite text='Dashboards provide real-time or near-real-time updates on key performance indicators (KPIs) and 
@@ -49,6 +51,7 @@ export default function Dashboard() {
               </div>
           ))}
           </div>
+      {/* <Footer/> */}
       </motion.div>
         )
       }

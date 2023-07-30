@@ -1,16 +1,49 @@
 .Main_Container{
-
+    /* width: 100vw; */
+    padding: 10px;
 }
-.container{
+.account_container{
     padding: 100px;
     display: flex;
     justify-content: space-between;
     width: 80%;
 }
-.mini_container{
+.account_mini_container{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 80%;
     margin: 10px;
+}
+.account_container_1{
+    display: flex;
+    justify-content: center;
+}
+.Account_dp_image{
+    width: 100px;
+    height: 100px;
+}
+@media screen and (max-width:600px) {
+    .Account_dp_image{
+        height: 100px;
+        width: 100px;
+    }
+    .account_container_1{
+        display: flex;
+        justify-content: center;
+    }
+    .account_container{
+        display: inline;
+    }
+    .account_mini_container{
+        display: inline;
+        width: 90%;
+        margin: 10px;
+    }
+    .account_description{
+        /* display: none; */
+        width: 100%;
+    }
+    
+
 }

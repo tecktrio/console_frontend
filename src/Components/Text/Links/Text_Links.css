@@ -1,18 +1,27 @@
 .text_links_a{
-    font-size: 14px;
-    /* display: flex;
-    justify-content: start; */
-    /* align-items: center; */
-    /* margin: 15px; */
+    font-size: 16px;
+    display: flex;
+    justify-content: start; 
+    align-items: center;
+    margin: 20px 30px;
+    padding: 0px;
     color: black;
+    flex-wrap: nowrap;
 }
 .text_links_a:hover{
     color: blue;
 }
-
+.textlink_image{
+    width:20px;
+    margin-right:10px;
+    /* color:white; */
+}
 @media screen and (max-width:600px) {
 
     .text_links_a{
-        justify-content: center;
+        /* justify-content: center; */
+        font-size: 18px;
+        /* margin: 10px; */
     }
+    
 }

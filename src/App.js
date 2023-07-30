@@ -8,6 +8,7 @@ import { SignUp_Step_2 } from './Pages/SignUp/SignUp_Step_2/SignUp_Step_2';
 import { SignUp_Step_3 } from './Pages/SignUp/SignUp_Step_3/SignUp_Step_3';
 import { SignUp_Step_4 } from './Pages/SignUp/SignUp_Step_4/SignUp_Step_4';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+import Footer from './Components/Footer/Footer';
 
 
 // Responsible for routing the root urls
@@ -34,6 +35,8 @@ function App() {
         </Routes>
       </HashRouter>
       </SkeletonTheme>
+      <Footer/>
+
     </div>
   );
 }

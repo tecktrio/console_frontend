@@ -4,6 +4,7 @@
     margin: 0px;
     padding: 0px;
     display: flex;
+    padding: 0px;
     justify-content: start;
     text-align: start;
 }
@@ -12,6 +13,9 @@
 @media screen and (max-width:600px) {
 
     .text_paragraph_lite{
-        justify-content: center;
+        justify-content: start;
+        font-size: 14px;
+        margin: 5px;
+
     }
 }

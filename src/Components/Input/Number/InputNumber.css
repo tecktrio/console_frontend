@@ -15,3 +15,28 @@
     margin: 5px 0px;
     /* width: 100%; */
 }
+
+@media screen and (max-width:600px) {
+    .number_input_input{
+        padding: 15px;
+        border-radius: 8px;
+        border: .5px solid rgba(0,0,0,.2);
+        outline: none;
+        margin: 5px 0px;
+        width: 82%;
+    }
+    .number_label{
+        font-size: 20px;
+    }
+    .number_input_label{
+        font-size: 20px;
+    }
+    .number_input_input{
+        height: 30px;
+        font-size: 20px;
+    }
+    .number_input_container{
+        width: 100%;
+    }
+
+}

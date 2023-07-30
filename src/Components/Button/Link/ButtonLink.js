@@ -12,10 +12,10 @@ export default function ButtonLink(props) {
     to={props.link} 
     style={{'textDecoration':'none'}}>
       <motion.div className='buttonlink_container' style={{'backgroundColor':primary,'color':secondary}} animate={{scale:1}} initial={{scale:0}}>
-        {props.icon!=''?<img src={props.icon || <Skeleton/>} style={{'width':'10%','margin':'0px 10px','color':'white'}}/>:<></>}
-        <section>
+        {props.icon!=''?<img src={props.icon || <Skeleton/>}  className='buttonlink_image' style={{'filter': 'invert(1)'}}/>:<></>}
+        <section className='buttonlink_container_mini'>
           {props.text!=''?props.text:<></>}
-          {props.description!=''?<p style={{'width':'100%','font-size':'10px','textAlign':'center','margin':'0px','color':'white'}}>{props.description }</p>:<></>}
+          {props.description!=''?<p style={{}}>{props.description }</p>:<></>}
         </section>
       </motion.div>
     </Link>

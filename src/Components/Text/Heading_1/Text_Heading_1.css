@@ -4,3 +4,12 @@
     padding: 0px;
     /* font-weight:bold; */
 }
+@media screen and (max-width:600px) {
+
+    .Text_Heading_1{
+        /* justify-content: start; */
+        font-size: 25px;
+        /* margin: 5px; */
+
+    }
+}

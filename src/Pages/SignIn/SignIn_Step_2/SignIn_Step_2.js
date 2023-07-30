@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom'
 import { motion } from "framer-motion"
 import { core_url } from '../../../Constants/Variables'
 import Signin_p_skeleton from '../../../Components/Skeletons/signin_p/Signin_p_skeleton'
+import Text_paragraph_lite from '../../../Components/Text/Paragraph_lite/Text_paragraph_lite'
 
 export function Signin_Step_2() {
   // function to send api request
@@ -76,16 +77,18 @@ else{
     <motion.div className='SignIn_2_main_container' animate={{scale:1}} initial={{scale:0}}>
       <div className='SignIn_2_container'>
         <div className='SignIn_2_mini_container'>
-           <div style={{'display':'flex','justifyContent':'center'}}><Text_Heading_2 text='Password' /></div>
+           <div style={{'display':'flex','justifyContent':'start'}}><Text_Heading_2 text='Password' /></div>
+           <Text_paragraph_lite text='Widecity is here to make everything simple for you.'/>
+
            {isfailed?<Text_Error text='Invalid Password'/>:<></>}
 
         <Input_Password label='' placeholder='Password' Getdata={handleState}/>
         <div className='Signin_2_link_container'>
-          <Text_Links text='Forget Password'/>&nbsp;
-          <Text_Links  text='| Create account'/>
+          {/* <Text_Links text='Forget Password'/>&nbsp; */}
+          <Text_Links  text='Create' link='/siginup_'/>
           </div>
           <div className='SignIn_2_Next_button' onClick={validatedata}>
-            <Button_Submit text='Next' />
+            <Button_Submit text='Sign In' />
           </div>
         </div>
       </div>

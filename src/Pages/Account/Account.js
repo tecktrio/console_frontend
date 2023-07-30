@@ -9,6 +9,9 @@ import { motion } from 'framer-motion'
 import axios from 'axios'
 import { core_url } from '../../Constants/Variables'
 import GetCookieValue from '../../Components/HandleCookie/GetCookie/GetCookieValue'
+import Button_Delete from '../../Components/Button/Delete/Button_Delete'
+import Cookies from 'js-cookie'
+import Footer from '../../Components/Footer/Footer'
 
 export default function Account() {
   const [firstname,setfirstname]=useState("Loading")
@@ -37,36 +40,48 @@ export default function Account() {
       like your contact details, visible to others so they can reach you easily. 
       You can also see a summary of your profiles.'/>
       </div>
-      <div className='container'>
-        <img src={Profile_Picture} style={{'height':'200px'}}/>
-      <div>
-          <div className='mini_container'>
+      <div className='account_container'>
+        <div className='account_container_1'>
+           <img src={Profile_Picture} className='Account_dp_image'/>
+        </div>
+        <div className='account_container_2'>
+          <div className='account_mini_container'>
             <div>
             <Text_Paragraph text='Name'/>
+            <div className='account_description'>
             <Text_paragraph_lite text='This is your public Name, Visible all over widecity products'/>
+            </div>
             </div>
             &nbsp;&nbsp;&nbsp;
             <Input_Text placeholder={firstname}/>
           </div>
-          <div className='mini_container'>
+          <div className='account_mini_container'>
             <div>
             <Text_Paragraph text='Email'/>
+            <div className='account_description'>
             <Text_paragraph_lite text='Email is user account unique id'/>
+            </div>
             </div>
             &nbsp;&nbsp;&nbsp;
             <Input_Text placeholder={email}/>
           </div>
-          <div className='mini_container'>
+          <div className='account_mini_container'>
             <div>
             <Text_Paragraph text='Contact'/>
+            <div className='account_description'>
             <Text_paragraph_lite text='Personal Contact Number'/>
+            </div>
             </div>
             &nbsp;&nbsp;&nbsp;
             <Input_Text placeholder={contact}/>
           </div>
+          <div>
+            <Button_Delete text='Signout' icon='' navigate='/signin_u' />
+          </div>
          
         </div>
       </div>
+      {/* <Footer/> */}
     </motion.div>
   )
 }

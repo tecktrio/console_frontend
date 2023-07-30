@@ -9,6 +9,9 @@
 
 .Dashboard_Product_container{
     display: flex;
-    width: 100%;
     width: 50vw;
+}
+.Dashboard_container_2_2_mini{
+    margin: 0px;
+    padding: 0px;
 }

@@ -8,25 +8,24 @@
 .Dashboard_container_2{
     /* background-color: red; */
     display: flex;
-    height: auto;
-    border: 1px solid rgb(230, 228, 228);
     height: 100vh;
 }
 .Dashboard_container_2_1{
     /* background-color: gray; */
-    border: 1px solid rgb(225, 222, 222);
+    border: 1px solid rgb(221, 219, 219);
     padding: 25px;
+    width: 300px;
 
 }
 .Dashboard_container_2_1{
     /* background-color: green; */
     display: inline;
     text-align: center;
-    width: 100px;
+    width: 300px;
+    height: 100%;
 }
 .Dashboard_Menu_button{
     margin: 20px;
-
 }
 .Dashboard_Menu_Heading_container{
     display: flex;
@@ -42,7 +41,7 @@
     width: 50vw;
     /* width: 100%; */
 }
-.Dashboard_User_Profile{
+.Dashboard_User_Profil{
     display: flex;
     align-items: center;
 }
@@ -57,12 +56,15 @@
     display: flex;
     /* justify-content: center; */
     flex-wrap: wrap;
+    width: 100vw;
     /* background-color: red; */
 }
 .Dashboard_container_2_1_celo{
     /* background-color: green; */
     display: none;
 }
+
+
 @media screen and (max-width:600px) {
 
     .Dashboard_container_2_1{
@@ -72,5 +74,23 @@
     .Dashboard_container_2_1_celo{
         /* background-color: green; */
         display: inline;
+        position: absolute;
+        background-color: rgb(233, 233, 233);
+        height: 100vh;
+        z-index: 100;
+        width: 50vw;
+        /* font-size: 18px; */
+    }
+    .Dashboard_User_Profil{
+        display: none;
+    }
+    .Dashboard_Menu_Heading_container_mini{
+        /* display: none; */
+    }
+    .Dashboard_container_2_2{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        /* align-items: center; */
     }
 }

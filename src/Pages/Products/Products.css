@@ -8,20 +8,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 10px;
-    height: 180px;
+    margin: 20px;
+    height: 200px;
 }
 .Product_mini_container{
     display: flex;
-    margin: 10px 0px;
-    /* align-items: center; */
-    /* justify-content: space-between; */
-    /* margin: 10px; */
+    align-items: center;
 }
 .Product_image{
-    margin: 3px 10px;
-    width: 20px;
-    height: 20px;
+    margin: 10px 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
 }
 .Product_Paragraph{
     display: flex;
@@ -33,5 +31,18 @@
 .Product_Get_Button{
     display: flex;
     justify-content: center;
-    margin: 10px;
+    margin: 10px 0px;
+}
+@media screen and (max-width:600px) {
+    .Product_Main_Container{
+        width: 80%;
+        height: 300px;
+        /* padding: 20px; */
+    }
+    .Product_image{
+        margin: 40px 20px;
+        width: 70px;
+        height: 70px;
+        border-radius: 5px;
+    }
 }

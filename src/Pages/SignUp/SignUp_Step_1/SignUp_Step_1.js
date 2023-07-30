@@ -78,7 +78,7 @@ export function SignUp_Step_1() {
           <div className='SignUp_link_container'>
             {/* <Text_Links value='Forget email'/>&nbsp; */}
             <Text_paragraph_lite text='Already have account?'/>
-            <Text_Links  text='Sign In' link='/signin_u'/>
+            <Text_Links  text='SignIn' link='/signin_u'/>
             </div>
             <div className='SignUp_Next_button' onClick={validatedata}>
               <Button_Submit text='Next'/>

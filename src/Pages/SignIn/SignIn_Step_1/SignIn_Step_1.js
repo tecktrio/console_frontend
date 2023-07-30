@@ -21,7 +21,7 @@ import Signin_u_skeleton from '../../../Components/Skeletons/signin_u/Signin_u_s
 export function Signin_Step_1() {
 
   // variables
-    const [data, setdata] = useState('');
+    const [data, setdata] = useState([]);
     const [Email, setemail] = useState('');
     const [isLoading, setisLoading] = useState(false);
     const [isfailed, setisfailed] = useState(false);
@@ -81,6 +81,7 @@ export function Signin_Step_1() {
                 <Text_Heading_2 text='Sign in to Widecity' />
                 
               </div>
+              
               <Text_paragraph_lite text='Widecity is here to make everything simple for you.'/>
               <Text_Links text='Learn More' icon={Reading_Book} /><br/>
 
@@ -88,8 +89,8 @@ export function Signin_Step_1() {
 
               <Input_Text label='use your widecity account' placeholder='Email id or phone number' Getdata={handleState}/>
               <div className='Signin_link_container'>
-                <Text_Links text='Forget email' icon={Forget_Password}/>&nbsp;
-                <Text_Links  text='| Create account' link='/signup_'/>
+                {/* <Text_Links text='Forget email' icon={Forget_Password}/>&nbsp; */}
+                <Text_Links  text='Create' link='/signup_' icon=''/>
               </div><br/>
               <div className='SignIn_Next_button' onClick={validateUserEmail}>
                 <Button_Submit text='Next'/>
