@@ -50,11 +50,11 @@ export default function Dashboard() {
           installed with your knowledge.'/>
           <br/>
           <div className='Dashboard_Product_container'>
-          {MyProducts.map((product)=>(
-            <div style={{'margin':'10px'}}>
+          {MyProducts?MyProducts.map((product)=>(
+            <div className='Dashboard_productcontainermini'>
               <ButtonLink text={product.ProductName} icon='' description={product.DueDate}/>
               </div>
-          ))}
+          )):<></>}
           </div>
       {/* <Footer/> */}
       </motion.div>

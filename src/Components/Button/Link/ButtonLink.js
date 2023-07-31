@@ -15,7 +15,7 @@ export default function ButtonLink(props) {
         {props.icon!=''?<img src={props.icon || <Skeleton/>}  className='buttonlink_image' style={{'filter': 'invert(1)'}}/>:<></>}
         <section className='buttonlink_container_mini'>
           {props.text!=''?props.text:<></>}
-          {props.description!=''?<p style={{}}>{props.description }</p>:<></>}
+          {props.description!=''?<p style={{'margin':'0px','padding':'0px'}}>{props.description }</p>:<></>}
         </section>
       </motion.div>
     </Link>

@@ -13,7 +13,7 @@ export default function Products() {
       // variables
       // const [product,setproduct] = useState([])
       const product = [{'Icon':QucikvoteIcon,'Name':'QucikVote','Description':'Quick Vote is an online voting system that can help you to conduct election in an easy way.','Installs':'52','Documentation':'https://docs.widecity.in/'},
-      {'Icon':AcademyIcon,'Name':'Academy','Description':'Widecity Academy helps students to learn different topic from the world in no time.','Installs':'55+','Documentation':'https://docs.widecity.in/'}]
+      {'Icon':AcademyIcon,'Name':'Academy','Description':'Widecity Academy helps students to learn different topic from the world in no time.','Installs':'55','Documentation':'https://docs.widecity.in/'}]
       const [isLoading,setisLoading] = useState(true)
       // useEffect Method 
       // useEffect(()=>{

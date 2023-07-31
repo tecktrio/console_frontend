@@ -35,4 +35,13 @@
     .DashboardOnBanner{
         /* font-size: 20px; */
     }
+    .Dashboard_productcontainermini{
+        /* width: 100vw; */
+        /* height: 10px; */
+        margin:10px;
+    }
+    .Dashboard_Product_container{
+        display: inline;
+        /* width: 50vw; */
+    }
 }
