@@ -28,6 +28,12 @@
     margin: 0px 50px;
     border-radius: 100%;
 }
+
+.Dashboard_productcontainermini{
+    /* width: 100vw; */
+    /* height: 10px; */
+    margin:10px;
+}
 @media screen and (max-width:600px) {
     .dashboardOnbannerimage{
         display: none;
