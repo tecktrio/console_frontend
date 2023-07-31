@@ -63,7 +63,9 @@
     /* background-color: green; */
     display: none;
 }
-
+.Dashboard_celo_menu_option{
+    margin:20px 30px;
+}
 
 @media screen and (max-width:600px) {
 
@@ -93,5 +95,8 @@
         justify-content: center;
         text-align: center;
         /* align-items: center; */
+    }
+    .Dashboard_celo_menu_option{
+        margin:20px 30px;
     }
 }

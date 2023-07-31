@@ -13,6 +13,7 @@ import Text_Error from '../../../Components/Text/Error/Text_Error'
 import LoadingScreen from '../../../Components/LoadingScreen/LoadingScreen'
 import { core_url } from '../../../Constants/Variables'
 import { useNavigate } from 'react-router-dom'
+import Signin_u_skeleton from '../../../Components/Skeletons/signin_u/Signin_u_skeleton'
 export function SignUp_Step_3() {
         // function to send api request
         const [data, setdata] = useState('');
@@ -76,7 +77,7 @@ export function SignUp_Step_3() {
 
   if (isLoading){
     return(
-    <LoadingScreen/>
+    <Signin_u_skeleton/>
     )
   }
   else{

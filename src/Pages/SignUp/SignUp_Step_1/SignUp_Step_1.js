@@ -12,6 +12,7 @@ import Text_Error from '../../../Components/Text/Error/Text_Error'
 import { core_url } from '../../../Constants/Variables'
 import { useNavigate } from 'react-router-dom'
 import Logo from '../../../assets/logo_white_72.png'
+import Signin_u_skeleton from '../../../Components/Skeletons/signin_u/Signin_u_skeleton'
 
 export function SignUp_Step_1() {
     // function to send api request
@@ -63,7 +64,7 @@ export function SignUp_Step_1() {
 
   if(isLoading){
   return (
-    <LoadingScreen/>
+    <Signin_u_skeleton/>
   )
   }
   else{

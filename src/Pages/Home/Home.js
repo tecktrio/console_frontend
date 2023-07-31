@@ -77,23 +77,23 @@ export default function Home(props) {
           <div className='Dashboard_container_2'>
 
             <div className='Dashboard_container_2_1'>
-              {Route =='home'?                      <ButtonLink text='Home'           link='' icon={Dashboard_Icon} description=""/>           :<Text_Links text='Home'           link='/home'                     icon={Dashboard_Icon}/>}
-              {Route =='products'?                  <ButtonLink text='Products'       link='' icon={Product_Icon} description=""/>             :<Text_Links text='Products'       link='/products'                 icon={Product_Icon}/>}
-              {Route =='billing'?                   <ButtonLink text='Billing'        link='' icon={Billing_Icon} description=""/>             :<Text_Links text='Billing'        link='/billing'                  icon={Billing_Icon}/>}
-              {Route =='account'?                   <ButtonLink text='Account'        link='' icon={Account_Icon} description=""/>             :<Text_Links text='Account'        link='/account'                  icon={Account_Icon}/>}
+              <div className='Dashboard_celo_menu_option'>{Route =='home'?                      <ButtonLink text='Home'           link='' icon={Dashboard_Icon} description=""/>           :<Text_Links text='Home'           link='/home'                     icon={Dashboard_Icon}/>}</div>
+              <div className='Dashboard_celo_menu_option'>{Route =='products'?                  <ButtonLink text='Products'       link='' icon={Product_Icon} description=""/>             :<Text_Links text='Products'       link='/products'                 icon={Product_Icon}/>}</div>
+              <div className='Dashboard_celo_menu_option'>{Route =='billing'?                   <ButtonLink text='Billing'        link='' icon={Billing_Icon} description=""/>             :<Text_Links text='Billing'        link='/billing'                  icon={Billing_Icon}/>}</div>
+              <div className='Dashboard_celo_menu_option'>{Route =='account'?                   <ButtonLink text='Account'        link='' icon={Account_Icon} description=""/>             :<Text_Links text='Account'        link='/account'                  icon={Account_Icon}/>}</div>
             </div>
 
             {sidebar?
             <motion.div className='Dashboard_container_2_1_celo' animate={{x:1}} initial={{x:-100}} transition={{ delay: -0.1, duration: .5 }}>
-              {Route =='home'?                      <ButtonLink text='Home'   link='' icon={Dashboard_Icon} description=""/>           :<Text_Links  text='Home'    link='/home'                     icon={Dashboard_Icon}/>}
-              {Route =='products'?                  <ButtonLink text='Products'   link='' icon={Product_Icon} description=""/>             :<Text_Links   text='Products'   link='/products'                 icon={Product_Icon}/>}
-              {Route =='billing'?                   <ButtonLink text='Billing'   link='' icon={Billing_Icon} description=""/>             :<Text_Links   text='Billing'   link='/billing'                  icon={Billing_Icon}/>}
-              {Route =='account'?                   <ButtonLink text='Account'   link='' icon={Account_Icon} description=""/>             :<Text_Links   text='Account'   link='/account'                  icon={Account_Icon}/>}
+              <div className='Dashboard_celo_menu_option'>{Route =='home'?                      <ButtonLink text='Home'   link='' icon={Dashboard_Icon} description=""/>           :<Text_Links  text='Home'    link='/home'                     icon={Dashboard_Icon}/>}</div>
+              <div className='Dashboard_celo_menu_option'>{Route =='products'?                  <ButtonLink text='Products'   link='' icon={Product_Icon} description=""/>             :<Text_Links   text='Products'   link='/products'                 icon={Product_Icon}/>}</div>
+              <div className='Dashboard_celo_menu_option'>{Route =='billing'?                   <ButtonLink text='Billing'   link='' icon={Billing_Icon} description=""/>             :<Text_Links   text='Billing'   link='/billing'                  icon={Billing_Icon}/>}</div>
+              <div className='Dashboard_celo_menu_option'>{Route =='account'?                   <ButtonLink text='Account'   link='' icon={Account_Icon} description=""/>             :<Text_Links   text='Account'   link='/account'                  icon={Account_Icon}/>}</div>
             </motion.div>: <motion.div className='Dashboard_container_2_1_celo' animate={{x:-500}} initial={{x:1}} transition={{ delay: 0, duration: 1 }}>
-              {Route =='home'?                      <ButtonLink text='Home'   link='' icon={Dashboard_Icon} description=""/>           :<Text_Links  text='Home'    link='/home'                     icon={Dashboard_Icon}/>}
-              {Route =='products'?                  <ButtonLink text='Products'   link='' icon={Product_Icon} description=""/>             :<Text_Links   text='Products'   link='/products'                 icon={Product_Icon}/>}
-              {Route =='billing'?                   <ButtonLink text='Billing'   link='' icon={Billing_Icon} description=""/>             :<Text_Links   text='Billing'   link='/billing'                  icon={Billing_Icon}/>}
-              {Route =='account'?                   <ButtonLink text='Account'   link='' icon={Account_Icon} description=""/>             :<Text_Links   text='Account'   link='/account'                  icon={Account_Icon}/>}
+            <div className='Dashboard_celo_menu_option'>{Route =='home'?                      <ButtonLink text='Home'   link='' icon={Dashboard_Icon} description=""/>           :<Text_Links  text='Home'    link='/home'                     icon={Dashboard_Icon}/>}</div>
+            <div className='Dashboard_celo_menu_option'>{Route =='products'?                  <ButtonLink text='Products'   link='' icon={Product_Icon} description=""/>             :<Text_Links   text='Products'   link='/products'                 icon={Product_Icon}/>}</div>
+            <div className='Dashboard_celo_menu_option'>{Route =='billing'?                   <ButtonLink text='Billing'   link='' icon={Billing_Icon} description=""/>             :<Text_Links   text='Billing'   link='/billing'                  icon={Billing_Icon}/>}</div>
+            <div className='Dashboard_celo_menu_option'>{Route =='account'?                   <ButtonLink text='Account'   link='' icon={Account_Icon} description=""/>             :<Text_Links   text='Account'   link='/account'                  icon={Account_Icon}/>}</div>
             </motion.div>}
 
             <div className='Dashboard_container_2_2'>
