@@ -32,17 +32,31 @@
     display: flex;
     justify-content: center;
     margin: 10px 0px;
+    /* width: 200px; */
+    /* background-color: blue; */
+}
+.Product_Main_ContainerM{
+    display: flex;
 }
 @media screen and (max-width:600px) {
     .Product_Main_Container{
         width: 80%;
-        height: 300px;
+        min-height: 200px;
+        border: none;
+        box-shadow: none;
         /* padding: 20px; */
     }
     .Product_image{
-        margin: 40px 20px;
+        margin: 20px 10px;
         width: 70px;
-        height: 70px;
+        height: 60px;
         border-radius: 5px;
+    }
+    .Product_Main_ContainerM{
+        display: inline;
+    }
+    .Product_Get_Button{
+        /* width: 100px; */
+        margin: 10px 0px;
     }
 }

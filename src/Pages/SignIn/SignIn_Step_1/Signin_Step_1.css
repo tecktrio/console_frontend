@@ -1,7 +1,8 @@
 .SignIn_main_container{
     display: flex;
     justify-content: center;
-    height: 100vh;
+    /* height: 100vh; */
+    margin-top: 5%;
     align-items: center;
 }
 .SignIn_container{
@@ -9,7 +10,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
     width: 400px;
 }
 .SignIn_mini_container{

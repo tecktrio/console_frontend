@@ -22,9 +22,10 @@ export function SignUp_Step_4() {
 
         // validating user login
         useEffect(()=>{
+          sendData();
           if(data['status'] == 'failed' || data['status']=='success'){
             if(data['status']=='success'){
-              navigate('/home')}
+              navigate('/signin_u')}
             else{
               setisfailed(true)
               setisLoading(false)

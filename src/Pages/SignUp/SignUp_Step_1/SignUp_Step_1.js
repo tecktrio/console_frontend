@@ -11,6 +11,7 @@ import LoadingScreen from '../../../Components/LoadingScreen/LoadingScreen'
 import Text_Error from '../../../Components/Text/Error/Text_Error'
 import { core_url } from '../../../Constants/Variables'
 import { useNavigate } from 'react-router-dom'
+import Logo from '../../../assets/logo_white_72.png'
 
 export function SignUp_Step_1() {
     // function to send api request
@@ -70,8 +71,13 @@ export function SignUp_Step_1() {
       <div className='SignUp_main_container'>
         <div className='SignUp_container'>
           <div className='SignUp_mini_container'>
+          <div style={{'display':'flex','justifyContent':'center'}}>
+                <div style={{'display':'inline','text-align':'center'}}>
+                <img src={Logo}/>
              <div style={{'display':'flex','justifyContent':'center'}}><Text_Heading_2 text='Sign Up to Widecity' /></div>
-          <Text_paragraph_lite text='Widecity is here to make everything simple for you.'/><Text_Links value='Learn More'/><br/><br/>
+          </div>
+          </div>
+          <Text_paragraph_lite text='Widecity is here to make everything simple for you.'/><Text_Links value='Learn More'/>
           {isfailed?<Text_Error text='Invalid Email or Contact'/>:<></>}
           <Input_Text label='Email id' placeholder='Email id ' Getdata={handleStateUsername}/>
           <InputNumber label='Phone Number' placeholder='+91'  Getdata={handleStatePhone}/>

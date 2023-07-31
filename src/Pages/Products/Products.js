@@ -30,28 +30,33 @@ export default function Products() {
       // },[])
       // return jsx
       return (
-        <>
-            {product.map((product) => (
-            <motion.div className='Product_Main_Container '  animate={{y:1}} initial={{y:100}}>
-              <div className='Product_mini_container'>
-                  <img src={product.Icon} alt='image' className='Product_image'/>
-                  <div>
-                      <Text_Heading_2 text={product.Name}/>
-              <Text_paragraph_lite text={product.Installs+'+ Installs'}/>
+        <div>
+            <div style={{'display':'inline'}}>
+            <Text_Heading_2 text='Released Products'/>
+            <Text_paragraph_lite text='All the new released products of widecity will be officialy available over here.'/>
+            </div>
+            <div  className='Product_Main_ContainerM '>
+                {product.map((product) => (
+                <motion.div className='Product_Main_Container '  animate={{y:1}} initial={{y:100}}>
+                  <div className='Product_mini_container'>
+                      <img src={product.Icon} alt='image' className='Product_image'/>
+                      <div>
+                          <Text_Heading_2 text={product.Name}/>
+                  <Text_paragraph_lite text={product.Installs+'+ Installs'}/>
+
+                      </div>
 
                   </div>
 
+                  <div className='Product_Paragraph'>
+                      <Text_paragraph_lite text={product.Description}/>
+                  </div>
+                  <div className='Product_Get_Button'>
+                  <ButtonLink text='Learn' link={product.Documentation} icon={Download_Icon} description=''/>
+                  </div>
+                </motion.div>
+                ))}
               </div>
-
-              <div className='Product_Paragraph'>
-                  <Text_paragraph_lite text={product.Description}/>
-              </div>
-              <div className='Product_Get_Button'>
-              <ButtonLink text='Learn' link={product.Documentation} icon={Download_Icon} description=''/>
-              </div>
-            </motion.div>
-            ))}
-            
-            </>
+            </div>
       )
     }

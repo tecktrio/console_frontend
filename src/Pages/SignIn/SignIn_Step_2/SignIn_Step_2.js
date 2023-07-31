@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom'
 import { motion } from "framer-motion"
 import { core_url } from '../../../Constants/Variables'
 import Signin_p_skeleton from '../../../Components/Skeletons/signin_p/Signin_p_skeleton'
+import Logo from '../../../assets/logo_white_72.png'
 import Text_paragraph_lite from '../../../Components/Text/Paragraph_lite/Text_paragraph_lite'
 
 export function Signin_Step_2() {
@@ -77,8 +78,15 @@ else{
     <motion.div className='SignIn_2_main_container' animate={{scale:1}} initial={{scale:0}}>
       <div className='SignIn_2_container'>
         <div className='SignIn_2_mini_container'>
+        <div style={{'display':'flex','justifyContent':'center'}}>
+                <div style={{'display':'inline','text-align':'center'}}>
+                <img src={Logo}/>
+                {/* <Text_Heading_2 text='Sign in to Widecity' /> */}
            <div style={{'display':'flex','justifyContent':'start'}}><Text_Heading_2 text='Password' /></div>
-           <Text_paragraph_lite text='Widecity is here to make everything simple for you.'/>
+
+                </div>
+              </div>
+           {/* <Text_paragraph_lite text='Widecity is here to make everything simple for you.'/> */}
 
            {isfailed?<Text_Error text='Invalid Password'/>:<></>}
 

@@ -10,6 +10,7 @@ import GetCookieValue from '../../Components/HandleCookie/GetCookie/GetCookieVal
 import { motion
  } from 'framer-motion'
 import Footer from '../../Components/Footer/Footer'
+import Text_Heading_1 from '../../Components/Text/Heading_1/Text_Heading_1'
 export default function Dashboard() {
   
     // functions senddata
@@ -34,7 +35,11 @@ export default function Dashboard() {
       <motion.div className='Dashboard_container_2_2_mini'  animate={{y:1}} initial={{y:100}}>
             <div style={{'display':'flex','justifyContent':'start'}}>
           {/* <img src={illustration} style={{'width':'50%','height':'200px'}}/> */}
-          <img src='https://media.istockphoto.com/id/1007077762/vector/website-header-or-banner-design-onam-festival-sale-with-discount-upto-65-offer-showing.jpg?s=170667a&w=0&k=20&c=fBzVMwmXCVyV2-eqr2FA-DWRHS89IZalfAXHQ2IHxys=' style={{'width':'100%','borderRadius':'10px','margin':'20px 0px'}}/>
+          <img src='https://media.istockphoto.com/id/1321012044/vector/white-gray-line-stripe-background-diagonal-neutral-texture-geometric-paper-web-banner.jpg?s=612x612&w=0&k=20&c=ALv8ZRcxOAZLZvIRt9dMexl5M7AuB8NfqtxpspzkNiQ=' style={{'width':'100%','height':'300px','borderRadius':'10px','margin':'20px 0px'}}/>
+            <div className='DashboardOnBanner'>
+              <h2>Widecity makes it<br/>Simple</h2>
+              {/* <img src='https://workplaceinsight.net/wp-content/uploads/2019/02/Boss-Deploy-Brochure-10.jpg' className='dashboardOnbannerimage'/> */}
+            </div>
           </div>
           <Text_Heading_2 text='Dashboard'/>
           <Text_paragraph_lite text='Dashboards provide real-time or near-real-time updates on key performance indicators (KPIs) and 

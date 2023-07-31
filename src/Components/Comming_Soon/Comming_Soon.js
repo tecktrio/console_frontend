@@ -1,9 +1,11 @@
 import React from 'react'
-import Comming_Soon_Icon from '../../assets/Images/comming_soon.png'
+import Comming_Soon_Icon from '../../assets/Loading/rocket.gif'
+import './Comming_Soon.css'
+
 export default function Comming_Soon() {
   return (
-    <div style={{'width':'60vw','display':'flex','justify-content':'center','margin':'50px'}}>
-      <img src={Comming_Soon_Icon} style={{'width':'20%'}}/>
+    <div className='comming_soon_container'>
+      <img src={Comming_Soon_Icon}  className='comming_soon_image'/>
     </div>
   )
 }

@@ -20,12 +20,13 @@ export default function Account() {
   const [contact,setcontact]=useState("Loading")
 
   useEffect(()=>{
-    const url = core_url+'/console/handleuser/'+GetCookieValue('userEmail')
+    const url = core_url+'/handleuser/'+GetCookieValue('userEmail')
     axios.get(url).then((response)=>{
       setfirstname(response.data['data']['FirstName'])
       setlastname(response.data['data']['LastName'])
       setemail(response.data['data']['Email'])
-      setcontact(response.data['data']['Contact'])
+      setcontact(response.data['data']['ContactNumber'])
+      console.log('fetched user data')
     }).catch((error)=>{
       console.log(error)
     })}
@@ -47,7 +48,7 @@ export default function Account() {
         <div className='account_container_2'>
           <div className='account_mini_container'>
             <div>
-            <Text_Paragraph text='Name'/>
+            <Text_Paragraph text='First Name'/>
             <div className='account_description'>
             <Text_paragraph_lite text='This is your public Name, Visible all over widecity products'/>
             </div>
@@ -55,6 +56,18 @@ export default function Account() {
             &nbsp;&nbsp;&nbsp;
             <Input_Text placeholder={firstname}/>
           </div>
+          <hr></hr>
+          <div className='account_mini_container'>
+            <div>
+            <Text_Paragraph text='Last Name'/>
+            <div className='account_description'>
+            <Text_paragraph_lite text='This is your public Name, Visible all over widecity products'/>
+            </div>
+            </div>
+            &nbsp;&nbsp;&nbsp;
+            <Input_Text placeholder={lastname}/>
+          </div>
+          <hr></hr>
           <div className='account_mini_container'>
             <div>
             <Text_Paragraph text='Email'/>
@@ -65,6 +78,7 @@ export default function Account() {
             &nbsp;&nbsp;&nbsp;
             <Input_Text placeholder={email}/>
           </div>
+          <hr></hr>
           <div className='account_mini_container'>
             <div>
             <Text_Paragraph text='Contact'/>
@@ -73,9 +87,9 @@ export default function Account() {
             </div>
             </div>
             &nbsp;&nbsp;&nbsp;
-            <Input_Text placeholder={contact}/>
+            <Input_Text placeholder={contact} />
           </div>
-          <div>
+          <div style={{'display':'flex','justifyContent':'end','margin':'100px 0px'}}>
             <Button_Delete text='Signout' icon='' navigate='/signin_u' />
           </div>
          

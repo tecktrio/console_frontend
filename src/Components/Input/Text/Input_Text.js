@@ -24,7 +24,7 @@ export function   Input_Text(props) {
   return (
     <div className='text_input_container'>
         <label className='text_input_label' style={{'color':dark_lite}}>{props.label}</label>
-        <input type='text' placeholder={props.placeholder} className='text_input_input' onChange={update}/>
+        <input type='text' placeholder={props.placeholder} className='text_input_input' onChange={update} value={props.value}/>
     </div>
   )
 }

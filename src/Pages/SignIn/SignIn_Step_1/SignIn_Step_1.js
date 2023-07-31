@@ -16,7 +16,7 @@ import Reading_Book from '../../../assets/Images/reading-book.png'
 import Forget_Password from '../../../assets/Images/forgot-password.png'
 import { motion } from "framer-motion"
 import Signin_u_skeleton from '../../../Components/Skeletons/signin_u/Signin_u_skeleton'
-
+import Logo from '../../../assets/logo_white_72.png'
 // main function
 export function Signin_Step_1() {
 
@@ -78,7 +78,11 @@ export function Signin_Step_1() {
           <div className='SignIn_container'>
             <div className='SignIn_mini_container'>
               <div style={{'display':'flex','justifyContent':'center'}}>
+                <div style={{'display':'inline','text-align':'center'}}>
+                <img src={Logo}/>
                 <Text_Heading_2 text='Sign in to Widecity' />
+                </div>
+              
                 
               </div>
               

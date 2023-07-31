@@ -1,6 +1,6 @@
 .text_paragraph_p{
     padding: 0px;
-    margin: 5px;
+    margin: 5px 0px;
     text-align: start;
     font-size: 20px;
 }

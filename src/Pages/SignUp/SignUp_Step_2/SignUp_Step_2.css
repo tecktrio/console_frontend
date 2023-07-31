@@ -40,4 +40,8 @@
         border: none;
         width: 80vw;
     }
+    .SignUp_Name_Input_container{
+        display: inline;
+        /* justify-content: space-between; */
+    }
 }

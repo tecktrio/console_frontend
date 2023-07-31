@@ -2,7 +2,7 @@
 
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
 }
 .SignIn_2_container{
     display: flex;
