@@ -27,7 +27,7 @@
     margin: 20px 0px;
 }
 .SignUp_Name_Input_container{
-    display: flex;
+    display: inline;
     justify-content: space-between;
 }
 

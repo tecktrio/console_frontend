@@ -80,21 +80,21 @@ export function Signin_Step_1() {
               <div style={{'display':'flex','justifyContent':'center'}}>
                 <div style={{'display':'inline','text-align':'center'}}>
                 <img src={Logo}/>
-                <Text_Heading_2 text='Sign in to Widecity' />
+                <Text_Heading_2 text='Signin to Widecity' />
                 </div>
               
                 
               </div>
               
-              <Text_paragraph_lite text='Widecity is here to make everything simple for you.'/>
-              <Text_Links text='Learn More' icon={Reading_Book} /><br/>
+              <Text_paragraph_lite text='Widecity is here to make everything simple for you.'/><br></br>
 
-              {isfailed?<Text_Error text='Invalid Email'/>:<></>}
+              {isfailed?<Text_Error text='ID seems Invalid'/>:<></>}
 
-              <Input_Text label='use your widecity account' placeholder='Email id or phone number' Getdata={handleState}/>
+              <Input_Text label='Use your Widecity Account ID' placeholder='Your ID' Getdata={handleState}/>
               <div className='Signin_link_container'>
                 {/* <Text_Links text='Forget email' icon={Forget_Password}/>&nbsp; */}
-                <Text_Links  text='Create' link='/signup_' icon=''/>
+              {/* <Text_Links text='Learn More' icon={Reading_Book} link='https://docs.widecity.in/' /> */}
+              <Text_Links  text='Get a New Account' link='/signup_' icon=''/>
               </div><br/>
               <div className='SignIn_Next_button' onClick={validateUserEmail}>
                 <Button_Submit text='Next'/>

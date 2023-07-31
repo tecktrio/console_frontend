@@ -13,15 +13,15 @@
 .Dashboard_container_2_1{
     /* background-color: gray; */
     border: 1px solid rgb(221, 219, 219);
-    padding: 25px;
-    width: 300px;
+    padding: 20px;
+    /* width: 200px; */
 
 }
 .Dashboard_container_2_1{
     /* background-color: green; */
     display: inline;
     text-align: center;
-    width: 300px;
+    /* width: 300px; */
     height: 100%;
 }
 .Dashboard_Menu_button{
@@ -56,7 +56,7 @@
     display: flex;
     /* justify-content: center; */
     flex-wrap: wrap;
-    width: 100vw;
+    /* width: 100vw; */
     /* background-color: red; */
 }
 .Dashboard_container_2_1_celo{
@@ -64,7 +64,7 @@
     display: none;
 }
 .Dashboard_celo_menu_option{
-    margin:20px 30px;
+    /* margin:20px 30px; */
 }
 
 @media screen and (max-width:600px) {
@@ -97,6 +97,6 @@
         /* align-items: center; */
     }
     .Dashboard_celo_menu_option{
-        margin:20px 30px;
+        /* margin:20px 30px; */
     }
 }

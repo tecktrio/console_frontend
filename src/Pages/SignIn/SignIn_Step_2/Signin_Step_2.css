@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     height: 100%;
+    margin-top: 10%;
 }
 .SignIn_2_container{
     display: flex;
@@ -20,6 +21,8 @@
 }
 .Signin_2_link_container{
     display: flex;
+    margin: 0px;
+    padding: 0px;
 }
 .SignIn_2_Next_button{
     display: flex;

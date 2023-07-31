@@ -87,10 +87,17 @@ export function SignUp_Step_3() {
       <div className='SignUp_3_container'>
         <div className='SignUp_3_mini_container'>
            <div style={{'display':'flex','justifyContent':'center'}}><Text_Heading_2 text='Set Password' /></div>
-        <Text_paragraph_lite text='Widecity is here to make everything simple for you.'/><Text_Links value='Learn More'/><br/><br/>
+        <Text_paragraph_lite text='Widecity is here to make everything simple for you.'/><Text_Links value='Learn More'/>
         {isfailed?<Text_Error text={error}/>:<></>}
-        <Input_Password label='New Password' placeholder='strong password' Getdata={handleStatepassword}/>
-          <Input_Password label='ReEnter Password' placeholder='strong password' Getdata={handleStatepassword_re}/>
+        <Input_Password label='New Key' placeholder='Your Key' Getdata={handleStatepassword}/>
+
+          <Input_Password label='ReEnter Key' placeholder='Your Key' Getdata={handleStatepassword_re}/>
+          <br></br>
+          <Text_paragraph_lite text='Note'/>
+          <Text_paragraph_lite text=' Key Must Have Atleast 8 Charecters'/>
+        <Text_paragraph_lite text=' Key Must Have Atleast One Capital Letter'/>
+        <Text_paragraph_lite text='  Key Must Have Atleast One Small Letter'/>
+        <Text_paragraph_lite text='  Key Must Have Atleast One Number'/>
           <div className='SignUp_3_Next_button' onClick={validatedata}>
             <Button_Submit text='Next' />
           </div>

@@ -23,7 +23,10 @@
 .Signin_link_container{
     display: flex;
     width: 300px;
-    align-items: center;
+    align-items: end;
+    justify-content: end;
+    text-align: end;
+
 }
 .SignIn_Next_button{
     display: flex;
@@ -44,11 +47,11 @@
         justify-content: center;
     }
     .Signin_link_container{
-        display: flex;
+        display: inline;
     }
     .SignIn_Next_button{
-        /* display: flex;
-        justify-content: center; */
+        display: flex;
+        justify-content: end; 
         width: 90vw;
     }
 }

@@ -89,7 +89,7 @@ export default function Account() {
             &nbsp;&nbsp;&nbsp;
             <Input_Text placeholder={contact} />
           </div>
-          <div style={{'display':'flex','justifyContent':'end','margin':'100px 0px'}}>
+          <div >
             <Button_Delete text='Signout' icon='' navigate='/signin_u' />
           </div>
          

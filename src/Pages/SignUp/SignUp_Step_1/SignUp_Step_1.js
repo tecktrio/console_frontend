@@ -80,8 +80,8 @@ export function SignUp_Step_1() {
           </div>
           <Text_paragraph_lite text='Widecity is here to make everything simple for you.'/><Text_Links value='Learn More'/>
           {isfailed?<Text_Error text='Invalid Email or Contact'/>:<></>}
-          <Input_Text label='Email id' placeholder='Email id ' Getdata={handleStateUsername}/>
-          <InputNumber label='Phone Number' placeholder='+91'  Getdata={handleStatePhone}/>
+          <Input_Text label='Your New ID' placeholder='Email id ' Getdata={handleStateUsername}/>
+          <InputNumber label='Your Phone Number' placeholder='+00 0000000000'  Getdata={handleStatePhone}/>
           <div className='SignUp_link_container'>
             {/* <Text_Links value='Forget email'/>&nbsp; */}
             <Text_paragraph_lite text='Already have account?'/>

@@ -13,14 +13,18 @@ import { core_url } from '../../../Constants/Variables'
 import Signin_p_skeleton from '../../../Components/Skeletons/signin_p/Signin_p_skeleton'
 import Logo from '../../../assets/logo_white_72.png'
 import Text_paragraph_lite from '../../../Components/Text/Paragraph_lite/Text_paragraph_lite'
-
+import GetCookieValue from '../../../Components/HandleCookie/GetCookie/GetCookieValue'
 export function Signin_Step_2() {
   // function to send api request
   const [data, setdata] = useState('');
   const [Password, setpassword] = useState('');
   const [isLoading, setisLoading] = useState(false);
   const [isfailed, setisfailed] = useState(false);
+  const [userEmail, setuserEmail] = useState('');
 
+  useEffect(()=>{
+    setuserEmail(GetCookieValue('userEmail'))
+  },[])
   const navigate = useNavigate()
   function getCookieValue(cookieName) {
     const cookies = document.cookie.split(';');
@@ -86,11 +90,17 @@ else{
 
                 </div>
               </div>
-           {/* <Text_paragraph_lite text='Widecity is here to make everything simple for you.'/> */}
+           <Text_paragraph_lite text='Widecity is here to make everything simple for you.'/>
+           <br></br>
+           <div style={{'display':'flex','justifyContent':'center'}}>
+           <div style={{'border':'.5px solid grey','borderRadius':'100px','padding':'5px 10px'}}>
+              ID {userEmail}
+            </div>
+           </div>
 
            {isfailed?<Text_Error text='Invalid Password'/>:<></>}
 
-        <Input_Password label='' placeholder='Password' Getdata={handleState}/>
+        <Input_Password label='Please Enter Your Secret Key' placeholder='Password' Getdata={handleState}/>
         <div className='Signin_2_link_container'>
           {/* <Text_Links text='Forget Password'/>&nbsp; */}
           <Text_Links  text='Create' link='/siginup_'/>

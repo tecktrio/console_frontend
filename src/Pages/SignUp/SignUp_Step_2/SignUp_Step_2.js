@@ -67,12 +67,13 @@ export function SignUp_Step_2() {
     <div className='SignUp_main_container'>
       <div className='SignUp_container'>
         <div className='SignUp_mini_container'>
-           <div style={{'display':'flex','justifyContent':'center'}}><Text_Heading_2 text="Let us know your" /></div>
-        <Text_paragraph_lite text='Widecity is here to make everything simple for you.'/><Text_Links value='Learn More'/><br/><br/>
-        {isfailed?<Text_Error text='First name and Last name cannot be empty'/>:<></>}
+           <div style={{'display':'flex','justifyContent':'center'}}>
+            <Text_Heading_2 text="Let us know your" /></div>
+        <Text_paragraph_lite text='Widecity is here to make everything simple for you.'/><Text_Links value='Learn More'/>
+        {isfailed?<Text_Error text='Fields Cannot be Empty'/>:<></>}
         <div className='SignUp_Name_Input_container'>
-          <Input_Text label='First Name' placeholder='first name' Getdata={handleStatefirstname}/>&nbsp;&nbsp;
-          <Input_Text label='Last Name' placeholder='last name'  Getdata={handleStatelastname}/>
+          <Input_Text label='First Name' placeholder='John' Getdata={handleStatefirstname}/>
+          <Input_Text label='Last Name' placeholder='Wike'  Getdata={handleStatelastname}/>
         </div>
           <div className='SignUp_Next_button' onClick={validatedata}>
             <Button_Submit text='Next' />
